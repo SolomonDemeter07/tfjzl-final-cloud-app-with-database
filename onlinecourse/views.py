@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
+from django.http import HttpResponse
 # <HINT> Import any new Models here
 from .models import Course, Enrollment
 from django.contrib.auth.models import User
@@ -132,5 +133,6 @@ def extract_answers(request):
         # Calculate the total score
 #def show_exam_result(request, course_id, submission_id):
 
-
+def submit(request, course_id):
+    return HttpResponse("Submit is not implemented yet")
 
